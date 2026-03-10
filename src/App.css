@@ -20,7 +20,7 @@ body::before {
   content: "";
   height: 100%;
   width: 483px;
-  background-image: url("src/images/bg-main-desktop.png");
+  background-image: url("public/images/bg-main-desktop.png");
   position: absolute;
   top: 0;
   left: 0;
@@ -49,7 +49,7 @@ body::before {
   height: 245px;
   width: 447px;
   border-radius: 10px;
-  background-image: url("src/images/bg-card-front.png");
+  background-image: url("public/images/bg-card-front.png");
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -69,7 +69,7 @@ body::before {
 
 .card-front::before {
   content: "";
-  background-image: url("src/images/card-logo.svg");
+  background-image: url("public/images/card-logo.svg");
   background-size: cover;
   background-repeat: no-repeat;
   height: 47px;
@@ -96,7 +96,7 @@ body::before {
   height: 245px;
   width: 447px;
   border-radius: 10px;
-  background-image: url("src/images/bg-card-back.png");
+  background-image: url("public/images/bg-card-back.png");
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
@@ -201,39 +201,40 @@ button:hover {
   color: #ff5050;
 }
 
-.thanks{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
+.thanks {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
 }
 
-.thanks img{
-    height: 80px;
-    width: 80px;
+.thanks img {
+  height: 80px;
+  width: 80px;
 }
 
-.thanks h1{
-    font-weight: 500;
-    font-size: 28px;
-    letter-spacing: 3.42;
-    color: #21092F;
+.thanks h1 {
+  font-weight: 500;
+  font-size: 28px;
+  letter-spacing: 3.42;
+  color: #21092f;
 }
 
-.thanks p{
-    font-weight: 500;
-    font-size: 18px;
-    color: #8F8694;
+.thanks p {
+  font-weight: 500;
+  font-size: 18px;
+  color: #8f8694;
 }
 
 @media (max-width: 1100px) {
   body::before {
     height: 240px;
     width: 100%;
+    background-image: url("public/images/bg-main-mobile.png");
   }
 
-  .whole{
+  .whole {
     flex-direction: column;
     padding-top: 50px;
   }
@@ -246,39 +247,59 @@ button:hover {
     justify-content: space-between;
     position: relative;
   }
-    .card-front{
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        z-index: 3;
-        height: 156px;
-        width: 285px;
-        padding: 20px;
-    }  
 
-    .card-front h1{
-        font-size: 18px;
-        letter-spacing: 2.2px;
-    }
-    .card-front .name-date p{
-        font-size: 9px;
-        letter-spacing: 1.29px;
-    }
+  .right {
+    width: 327px;
+  }
+  .card-front {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 3;
+    height: 156px;
+    width: 285px;
+    padding: 20px;
+  }
 
-    .card-front::before{
-        height: 30px;
-        width: 54px;
-    }
+  .card-front h1 {
+    font-size: 18px;
+    letter-spacing: 2.2px;
+  }
+  .card-front .name-date p {
+    font-size: 9px;
+    letter-spacing: 1.29px;
+  }
 
-    .card-back{
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 286px;
-        height: 157px;
-    }
+  .card-front::before {
+    height: 30px;
+    width: 54px;
+  }
 
-    .card-back p{
-        top: 44%;
-    }
+  .card-back {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 286px;
+    height: 157px;
+  }
+
+  .card-back p {
+    top: 44%;
+  }
+
+  .right input {
+    width: 327px;
+  }
+
+  .small-inputs-left input {
+    width: 72px;
+  }
+
+  .small-inputs-right input {
+    width: 164px;
+  }
+
+  button {
+    width: 327px;
+  }
 }
