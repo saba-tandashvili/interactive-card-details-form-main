@@ -16,7 +16,7 @@ body {
   margin: 0;
 }
 
-.right::before {
+.left::before {
   content: "";
   height: 100%;
   width: 483px;
