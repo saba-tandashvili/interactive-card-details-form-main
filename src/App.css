@@ -20,7 +20,7 @@ body::before {
   content: "";
   height: 100%;
   width: 483px;
-  background-image: url("src/images/bg-main-desktop.png");
+  background-image: url("C:/Users/Tina/Desktop/Code 2/interactive-card-details-form-main/src/images/bg-main-desktop.png");
   position: absolute;
   top: 0;
   left: 0;
