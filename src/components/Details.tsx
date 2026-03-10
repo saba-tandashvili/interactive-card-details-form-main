@@ -1,5 +1,10 @@
 import Complete from "../../public/images/icon-complete.svg";
 
+import Bg from "../../public/images/bg-main-desktop.png"
+import Front from "../../public/images/bg-card-front.png"
+import Back from "../../public/images/bg-card-back.png"
+import Logo from "../../public/images/card-logo.svg"
+
 type DetailsProps = {
   number: string;
   setNumber: (v: string) => void;
@@ -34,7 +39,7 @@ export default function Details({
 }: DetailsProps) {
   return (
     <>
-      <div className="right" style={{ display: thanks ? "none" : "" }}>
+      <div className="right" style={{ display: thanks ? "none" : "", backgroundImage: Bg }}>
         <label htmlFor="name">
           <p>CARDHOLDER NAME</p>
           <input

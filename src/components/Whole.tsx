@@ -2,6 +2,7 @@ import { useState } from "react";
 import Card from "./Card";
 import Details from "./Details";
 
+
 export default function Whole() {
   const [number, setNumber] = useState("");
   const [name, setName] = useState("");
