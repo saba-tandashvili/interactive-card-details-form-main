@@ -16,17 +16,13 @@ body {
   margin: 0;
 }
 
-.left::before {
-  content: "";
+.bg {
   height: 100%;
   width: 483px;
-  background-image: url("public/images/bg-main-desktop.png");
   position: absolute;
   top: 0;
   left: 0;
   z-index: -1;
-  background-size: cover;
-  background-repeat: no-repeat;
 }
 
 .whole {
@@ -49,13 +45,25 @@ body {
   height: 245px;
   width: 447px;
   border-radius: 10px;
-  background-image: url("public/images/bg-card-front.png");
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: end;
   position: relative;
   padding: 30px;
+}
+
+.logo {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.front {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
 }
 
 .card-front h1 {
@@ -65,18 +73,6 @@ body {
   letter-spacing: 3.42px;
   margin-bottom: 10px;
   align-self: start;
-}
-
-.card-front::before {
-  content: "";
-  background-image: url("public/images/card-logo.svg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 47px;
-  width: 84px;
-  position: absolute;
-  top: 20px;
-  left: 20px;
 }
 
 .card-front .name-date {
@@ -96,9 +92,6 @@ body {
   height: 245px;
   width: 447px;
   border-radius: 10px;
-  background-image: url("public/images/bg-card-back.png");
-  background-size: cover;
-  background-repeat: no-repeat;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -107,6 +100,13 @@ body {
   padding: 30px;
   position: relative;
   align-self: flex-end;
+}
+
+.back {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
 }
 
 .card-back p {
@@ -228,10 +228,12 @@ button:hover {
 }
 
 @media (max-width: 1100px) {
-  body::before {
+  .bg {
+    position: absolute;
+    top: 0;
+    left: 0;
     height: 240px;
     width: 100%;
-    background-image: url("public/images/bg-main-mobile.png");
   }
 
   .whole {
@@ -251,6 +253,16 @@ button:hover {
   .right {
     width: 327px;
   }
+
+  .front {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    height: 156px;
+    width: 285px;
+  }
+
   .card-front {
     position: absolute;
     bottom: 0;
@@ -279,8 +291,18 @@ button:hover {
     position: absolute;
     top: 0;
     right: 0;
+    z-index: 1;
     width: 286px;
     height: 157px;
+  }
+
+    .back {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    height: 156px;
+    width: 285px;
   }
 
   .card-back p {

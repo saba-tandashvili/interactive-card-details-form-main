@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Card from "./Card";
 import Details from "./Details";
+import Bg from "../../public/images/bg-main-desktop.png"
 
 
 export default function Whole() {
@@ -35,6 +36,7 @@ export default function Whole() {
 
   return (
     <div className="whole">
+        <img src={Bg} alt="" className="bg"/>
       <Card number={number} name={name} month={month} year={year} cvc={cvc} />
       <Details
         number={number}
